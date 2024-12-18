@@ -16,10 +16,11 @@ app.use((req, res, next) => {
   }
   next();
 });
-
+//REGISTER/LOGIN
 app.post('/api/auth/register', register);
 app.post('/api/auth/login', login);
 
+///OPERATIONS - FILMS
 app.get('/api/films/readall', authMiddleware, checkRole(false), readAll);
 app.post('/api/films/create', authMiddleware, checkRole(true), createFilms);
 app.put('/api/films/update', authMiddleware, checkRole(true), updateFilm);

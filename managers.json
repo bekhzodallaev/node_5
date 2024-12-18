@@ -34,5 +34,47 @@
     "email": "newmanager01@example.com",
     "password": "$2b$10$O/swOaI22AyQAtTUkQQLm.omwNNR4f.E.WtIZM9dujfgFtvWnjL5y",
     "super": false
+  },
+  {
+    "id": 1734526066484,
+    "email": "newmanager001@example.com",
+    "password": "$2b$10$YLKY3ScfrbuWrLlRTBe12ez2fCMDhN4hDH9ujMmmMWUrVNkkZcY1S",
+    "super": false
+  },
+  {
+    "id": 1734526517865,
+    "email": "aaaa@gmail.com",
+    "password": "$2b$10$kgLVWQ/B90y2obUNuolgnu2NQOHUocVNUK9rvMRkQVe.K3xMiYBhW",
+    "super": false
+  },
+  {
+    "id": 1734527648706,
+    "email": "bb@gmail.com",
+    "password": "$2b$10$JnoErCehrnYepIs7zdeh2OkPJ4eAgIE2V9iWtMGV1nfwWZDzZAriK",
+    "super": false
+  },
+  {
+    "id": 1734527811302,
+    "email": "bbaa@gmail.com",
+    "password": "$2b$10$OSLjGM/CsfkQ17rzmOOSzugLfEOsgSGmVJ6MPAnJcIZuiV8RJW/W.",
+    "super": false
+  },
+  {
+    "id": 1734528339986,
+    "email": "bbassa@gmail.com",
+    "password": "$2b$10$FKcuRHikOj/UDi7v4EBkoeTnjo3pECV2QShk8H6mTcf9XasmfPmoS",
+    "super": true
+  },
+  {
+    "id": 1734528355180,
+    "email": "bbsssassa@gmail.com",
+    "password": "$2b$10$YIgFcGqhgLLTdCzBn9egmOCIHHEr2gr61ls2CkrXct4XQL8UUy1H.",
+    "super": true
+  },
+  {
+    "id": 1734528821538,
+    "email": "xxxxxx@gmail.com",
+    "password": "$2b$10$5TVVT1JPymf513PwBTYGFebkRp8B9UDZkr5RuP4iLxrbpkMaOdHM6",
+    "super": true
   }
 ]

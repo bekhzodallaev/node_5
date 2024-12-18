@@ -1,13 +1,15 @@
+require('dotenv').config();
+
 const managerModel = require('../models/managerModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
 
 const register = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, super: isSuper } = req.body;
 
   try {
-    const newManager = await managerModel.addManager(email, password, false);
+    const newManager = await managerModel.addManager(email, password, isSuper);
+
     res.status(201).json({
       message: 'User registered succcessfully',
       manager: { id: newManager.id, email: newManager.email },
@@ -26,16 +28,17 @@ const login = async (req, res) => {
   }
 
   try {
-    const manager = managerModel.findByEmail(email);
+    const manager = await managerModel.findByEmail(email);
     if (!manager || !(await bcrypt.compare(password, manager.password))) {
       return res.status(400).json({ message: 'Invalid email or password' });
     }
 
     const token = jwt.sign(
-      { id: manager.id, email: manager.email },
+      { id: manager.id, email: manager.email, super: manager.super },
       process.env.JWT_TOKEN,
       { expiresIn: process.env.JWT_EXPIRES_IN }
     );
+
     res.status(200).json({ message: 'Login successful', token });
   } catch (error) {
     console.log(error);
