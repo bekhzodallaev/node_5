@@ -4,5 +4,11 @@
     "email": "admin@example.com",
     "password": "$2b$10$IAScntyZzc9QRS6qpOPXDe0fgWMGchGc.V1gkix2pGijpAWHwIJim",
     "super": false
+  },
+  {
+    "id": 1734460192850,
+    "email": "exampleuser@gmail.com",
+    "password": "$2b$10$HnbBlfpiLf4JtWGzGLnr7.kGaWDWg/5vv70cOwDRzT44dgq6VFD/.",
+    "super": false
   }
 ]

@@ -1,5 +1,5 @@
 const express = require('express');
-const { register } = require('./controllers/authController');
+const { register, login } = require('./controllers/authController');
 const app = express();
 const PORT = 3000;
 
@@ -36,6 +36,7 @@ app.use(express.json());
 // });
 
 app.post('/api/auth/register', register);
+app.post('/api/auth/login', login);
 
 app.listen(PORT, (err) => {
   if (err) {
