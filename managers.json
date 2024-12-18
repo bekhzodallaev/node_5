@@ -76,5 +76,11 @@
     "email": "xxxxxx@gmail.com",
     "password": "$2b$10$5TVVT1JPymf513PwBTYGFebkRp8B9UDZkr5RuP4iLxrbpkMaOdHM6",
     "super": true
+  },
+  {
+    "id": 1734532103766,
+    "email": "xxxcccxxx@gmail.com",
+    "password": "$2b$10$sdd.Sdxu51Bi3EKFp8dZ7OB7gDp0uZRDXVKEmTW5o0WyeBPDnhh3O",
+    "super": false
   }
 ]
