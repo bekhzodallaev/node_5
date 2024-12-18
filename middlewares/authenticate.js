@@ -1,25 +1,22 @@
 require('dotenv').config();
 
 const jwt = require('jsonwebtoken');
-const managerModel = require('../models/managerModel'); // Ensure this path is correct
+const managerModel = require('../models/managerModel');
 
 const authMiddleware = (req, res, next) => {
   const authHeader = req.headers.authorization;
 
-  // Check if Authorization header is present
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return res
       .status(401)
       .json({ message: 'Authorization header is missing or invalid' });
   }
 
-  const token = authHeader.split(' ')[1]; // Extract the token
+  const token = authHeader.split(' ')[1];
 
   try {
-    // Verify the token
     const decoded = jwt.verify(token, process.env.JWT_TOKEN);
 
-    // Find the user by ID
     const manager = managerModel.findById(decoded.id);
     if (!manager) {
       return res
@@ -27,14 +24,29 @@ const authMiddleware = (req, res, next) => {
         .json({ message: 'User not found or token invalid' });
     }
 
-    // Attach the user to the request object
     req.user = manager;
 
-    next(); // Proceed to the next middleware or route handler
+    next();
   } catch (error) {
     console.error('Token verification error:', error.message);
     res.status(403).json({ message: 'Invalid or expired token' });
   }
 };
 
-module.exports = authMiddleware;
+const checkRole = (requiredRole) => {
+  return (req, res, next) => {
+    if (!req.user) {
+      return res.status(403).json({ message: 'User not authenticated' });
+    }
+
+    if (requiredRole === 'superuser' && !req.user.super) {
+      return res
+        .status(403)
+        .json({ message: 'Access denied, Superuser role required.' });
+    }
+
+    next();
+  };
+};
+
+module.exports = { authMiddleware, checkRole };

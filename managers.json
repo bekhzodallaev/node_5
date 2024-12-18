@@ -10,5 +10,23 @@
     "email": "exampleuser@gmail.com",
     "password": "$2b$10$HnbBlfpiLf4JtWGzGLnr7.kGaWDWg/5vv70cOwDRzT44dgq6VFD/.",
     "super": false
+  },
+  {
+    "id": 1734516895403,
+    "email": "exampleuser02@gmail.com",
+    "password": "$2b$10$..Qi7YKk2L1vYIEpa/uvUOg99UsvmXmq.jKwEXU0ka6c/mKiFHsRa",
+    "super": false
+  },
+  {
+    "id": 1734517122463,
+    "email": "user@example.com",
+    "password": "$2b$10$obVenLomooTX850yqtdpieXD8yn8LjeymI983QNZoY826CDDvGN4e",
+    "super": false
+  },
+  {
+    "id": 1734518745827,
+    "email": "newmanager@example.com",
+    "password": "$2b$10$LyelXbRJbAPMO1DLDjUx5Okgf1LgKK8o9AK65IpGNOfSPn3NkAOsW",
+    "super": false
   }
 ]
