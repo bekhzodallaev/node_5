@@ -33,13 +33,13 @@ const authMiddleware = (req, res, next) => {
   }
 };
 
-const checkRole = (requiredRole) => {
+const checkRole = (allowedSuper) => {
   return (req, res, next) => {
     if (!req.user) {
       return res.status(403).json({ message: 'User not authenticated' });
     }
 
-    if (requiredRole === 'superuser' && !req.user.super) {
+    if (allowedSuper && !req.user.super) {
       return res
         .status(403)
         .json({ message: 'Access denied, Superuser role required.' });

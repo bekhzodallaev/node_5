@@ -28,5 +28,11 @@
     "email": "newmanager@example.com",
     "password": "$2b$10$LyelXbRJbAPMO1DLDjUx5Okgf1LgKK8o9AK65IpGNOfSPn3NkAOsW",
     "super": false
+  },
+  {
+    "id": 1734525138830,
+    "email": "newmanager01@example.com",
+    "password": "$2b$10$O/swOaI22AyQAtTUkQQLm.omwNNR4f.E.WtIZM9dujfgFtvWnjL5y",
+    "super": false
   }
 ]
